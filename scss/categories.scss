@@ -1,0 +1,72 @@
+.categories-list {
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    flex-wrap: wrap;
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid #CDCDCD;
+        flex-basis: 31%;
+        margin-bottom: 30px;
+        min-height: 130px;
+        border-radius: 3px;
+
+        &:hover {
+            box-shadow: 3px 3px 20px rgba(50, 50, 50, 0.25);
+            transition: .3s; 
+
+            .categories-list__title {
+                color: $accent-color;
+                transition: .3s; 
+            }
+        }
+
+        &.active {
+            box-shadow: 3px 3px 20px rgba(50, 50, 50, 0.25);
+
+            .categories-list__title {
+                color: $accent-color;
+            }
+        }
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        margin-left: 20px;
+        flex-basis: 50%;
+
+        &>h3 {
+            color: #48494D;
+            font-size: 23px;
+            font-weight: bold;
+            margin-bottom: 40px;
+        }
+
+        &>a {
+            color: #C4C4C4;
+            font-size: 23px;
+            font-weight: 300;
+        }
+    }
+
+    &__image {
+        width: 97px;
+        height: 97px;
+        background: url("../images/icons/ellipse.png") no-repeat;
+        overflow: hidden;
+        position: relative;
+        margin-right: 20px;
+        img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+        }
+    }
+}
+

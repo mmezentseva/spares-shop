@@ -1,0 +1,43 @@
+$black-color: #000000;
+$accent-color: #FF7931;
+$gradient-dark: #9710E9;
+$gradient-light: #FD8D43;
+$font-color: #48494D;
+$light-color: #ffffff;
+$gray-color: #F0F0F4;
+
+body {
+    font-family: 'Barlow', sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+p, h1, h2, h3, ul, li {
+    text-decoration: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: $font-color;  
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    &-row {
+        display: flex;
+        flex-direction: row; 
+    }
+}
