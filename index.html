@@ -66,6 +66,11 @@
                     </div> -->
                 </div>
                 <div class="main-block-adv">
+                    <img src="images/content/sale-flag-lamp.png" class="main-block__sale" alt="sale">
+                    <div class="main-block__price">
+                        <span class="main-block__price-sale">200 р</span>
+                        <img src="images/icons/price-lamp.svg" alt="цена">
+                    </div>
                     <div class="main-block__image">
                         <div class="main-block__img">
                             <img src="images/content/lamp.png" alt="лампочка">
@@ -74,8 +79,13 @@
                     </div>
                     <div class="main-block__text">
                         <h3>До конца акции осталось:</h3>
-                        <span>00:20:00</span>
-                        <small>часов минут секунд</small>
+                        <div class="main-block__timer">
+                            <img src="images/icons/timer.svg" alt="часы">
+                            <div class="main-block__timer-counter">
+                                <span>00:20:00</span>
+                                <small>часов минут секунд</small>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -91,7 +101,7 @@
                 </ul>
                 <div class="search-form">
                     <input class="search-form__input" type="text" name="" placeholder="Введите марку автомобиля">
-                    <div class="search-form__btn">искать</div>
+                    <button class="search-form__btn">искать</button>
                 </div>
             </div>
         </section>
@@ -156,38 +166,178 @@
                 </ul>
             </div>
         </section>
-        <section class="popular">
+        <section class="products products--popular">
+            <!-- <div class="popular-products__arrow popular-products__arrow--left">
+                <img src="images/icons/arrow_left_products.svg" alt="стрелка влево">
+            </div> -->
             <div class="container">
-                <h2 class="popular__title">Популярные товары</h2>
-                <ul class="popular-category">
-                    <li class="popular-category__item"><a href="">запчасти</a></li>
-                    <li class="popular-category__item"><a href="">автохимия</a></li>
-                    <li class="popular-category__item"><a href="">шины и диски</a></li>
-                    <li class="popular-category__item"><a href="">автоэлектроника</a></li>
-                    <li class="popular-category__item"><a href="">инструменты</a></li>
-                    <li class="popular-category__item"><a href="">аксессуары и другое</a></li>
+                <h2 class="products__title">Популярные товары</h2>
+                <ul class="products-category">
+                    <li class="products-category__item active"><a href="">запчасти</a></li>
+                    <li class="products-category__item"><a href="">автохимия</a></li>
+                    <li class="products-category__item"><a href="">шины и диски</a></li>
+                    <li class="products-category__item"><a href="">автоэлектроника</a></li>
+                    <li class="products-category__item"><a href="">инструменты</a></li>                                                                                                                                           
+                    <li class="products-category__item"><a href="">аксессуары и другое</a></li>
                 </ul>
-                <div class="popular-products">
-                    <div class="popular-products__arrow popular-products__arrow--left">
-                        <img src="" alt="стрелка влево">
-                    </div>
-                    <ul class="popular-products__list">
-                        <li class="popular-products__item">
-                            <img class="popular-products__item-like" alt="лайк">
-                            <div class="popular-products__item-image">
-                                <img src="" alt="ремень">
+                <div class="products-elements">
+                    <ul class="products-elements__list">
+                        <li class="products-elements__item">
+                            <img src="images/content/sale-flag.png" class="products-elements__item-sale hidden" alt="sale">
+                            <div class="products-elements__feachers">
+                                <img src="images/icons/like.svg" class="products-elements__feachers-like" alt="лайк">
+                                <img src="images/icons/icon_sun.svg" class="products-elements__feachers-sun hidden" alt="sun">                                                                                                                                                                                                                                                                                                                                                                                                                  
                             </div>
-                            <h3 class="popular-products__item-title">Ремень</h3>
-                            <span class="popular-products__item-price">440 Р</span>
+                            <div class="products-elements__item-image">
+                                <img src="images/content/belt.jpg" alt="ремень">
+                            </div>
+                            <h3 class="products-elements__item-title">Ремень</h3>
+                            <span class="products-elements__item-price">440 Р</span>
+                            <img src="images/icons/products_basket.svg" class="products-elements__item-basket" alt="корзина">
+                            <h3 class="products-elements__item-hover">быстрый просмотр</h3>
+                        </li>
+                        <li class="products-elements__item">
+                            <img src="images/content/sale-flag.png" class="products-elements__item-sale" alt="sale">
+                            <div class="products-elements__feachers">
+                                <img src="images/icons/like.svg" class="products-elements__feachers-like" alt="лайк">
+                                <img src="images/icons/icon_snow.svg" class="products-elements__feachers-sun" alt="sun">                                                                                                                                                                                                                                                                                                                                                                                                                  
+                            </div>
+                            <div class="products-elements__item-image">
+                                <img src="images/content/tire-1.jpg" alt="шина">
+                            </div>
+                            <h3 class="products-elements__item-title">Шина 205/80 R16 104Q Misha RF Power Grum</h3>
+                            <span class="products-elements__item-price">11 680 Р</span>
+                            <img src="images/icons/products_basket.svg" class="products-elements__item-basket" alt="корзина">
+                            <h3 class="products-elements__item-hover">быстрый просмотр</h3>
+                        </li>
+                        <li class="products-elements__item">
+                            <img src="images/content/sale-flag.png" class="products-elements__item-sale hidden" alt="sale">
+                            <div class="products-elements__feachers">
+                                <img src="images/icons/like.svg" class="products-elements__feachers-like" alt="лайк">
+                                <img src="images/icons/icon_sun.svg" class="products-elements__feachers-sun hidden" alt="sun">                                                                                                                                                                                                                                                                                                                                                                                                                  
+                            </div>                            
+                            <div class="products-elements__item-image">
+                                <img src="images/content/headlight.jpg" alt="фара">
+                            </div>
+                            <h3 class="products-elements__item-title">Фара Nokian 2025</h3>
+                            <span class="products-elements__item-price">680 Р</span>
+                            <img src="images/icons/products_basket.svg" class="products-elements__item-basket" alt="корзина">
+                            <h3 class="products-elements__item-hover">быстрый просмотр</h3>
+                        </li>
+                        <li class="products-elements__item">
+                            <img src="images/content/sale-flag.png" class="products-elements__item-sale" alt="sale">
+                            <div class="products-elements__feachers">
+                                <img src="images/icons/like.svg" class="products-elements__feachers-like" alt="лайк">
+                                <img src="images/icons/icon_sun.svg" class="products-elements__feachers-sun" alt="sun">                                                                                                                                                                                                                                                                                                                                                                                                                  
+                            </div>                            
+                            <div class="products-elements__item-image">
+                                <img src="images/content/tire.jpg" alt="шина">
+                            </div>
+                            <h3 class="products-elements__item-title">Шина 245/60 R18 105T Contyther Crosh Conta...</h3>
+                            <span class="products-elements__item-price hidden"></span>
+                            <div class="products-elements__item-none">
+                                <h3>нет в наличии</h3>
+                                <a href="">Сообщить о поступлении</a>
+                            </div>
+                            <img src="images/icons/products_basket.svg" class="products-elements__item-basket hidden" alt="корзина">
+                            <h3 class="products-elements__item-hover">быстрый просмотр</h3>
                         </li>
                     </ul>
-                    <div class="popular-products__arrow popular-products__arrow--right">
-                        <img src="" alt="стрелка вправо">
-                    </div>
-
                 </div>
-                <button class="popular__btn">смотреть еще</button>
+                <button class="products__btn">смотреть еще</button>
             </div>
+            <!-- <div class="popular-products__arrow popular-products__arrow--right">
+                <img src="images/icons/arrow_right_products.svg" alt="стрелка вправо">
+            </div> -->
+        </section>
+        <section class="sale">
+            <div class="container">
+                <img src="images/content/sale50.jpg" alt="sale">
+            </div>
+        </section>
+
+        <section class="products products--similar">
+            <!-- <div class="popular-products__arrow popular-products__arrow--left">
+                <img src="images/icons/arrow_left_products.svg" alt="стрелка влево">
+            </div> -->
+            <div class="container">
+                <h2 class="products__title">С этим товаром покупают</h2>
+                <ul class="products-category">
+                    <li class="products-category__item"><a href="">запчасти</a></li>
+                    <li class="products-category__item"><a href="">автохимия</a></li>
+                    <li class="products-category__item active"><a href="">шины и диски</a></li>
+                    <li class="products-category__item"><a href="">автоэлектроника</a></li>
+                    <li class="products-category__item"><a href="">инструменты</a></li>
+                    <li class="products-category__item"><a href="">аксессуары и другое</a></li>
+                </ul>
+                <div class="products-elements">
+                    <ul class="products-elements__list">
+                        <li class="products-elements__item">
+                            <img src="images/content/sale-flag.png" class="products-elements__item-sale" alt="sale">
+                            <div class="products-elements__feachers">
+                                <img src="images/icons/like.svg" class="products-elements__feachers-like" alt="лайк">
+                                <img src="images/icons/icon_sun.svg" class="products-elements__feachers-sun" alt="sun">                                                                                                                                                                                                                                                                                                                                                                                                                  
+                            </div>                            
+                            <div class="products-elements__item-image">
+                                <img src="images/content/tire.jpg" alt="шина">
+                            </div>
+                            <h3 class="products-elements__item-title">Шина 205/80 R16 104Q Misha RF Power Grum</h3>
+                            <span class="products-elements__item-price hidden"></span>
+                            <div class="products-elements__item-none">
+                                <h3>нет в наличии</h3>
+                                <a href="">Сообщить о поступлении</a>
+                            </div>
+                            <img src="images/icons/products_basket.svg" class="products-elements__item-basket hidden" alt="корзина">
+                        </li>
+                        <li class="products-elements__item">
+                            <img src="images/content/sale-flag.png" class="products-elements__item-sale hidden" alt="sale">
+                            <div class="products-elements__feachers">
+                                <img src="images/icons/like.svg" class="products-elements__feachers-like" alt="лайк">
+                                <img src="images/icons/icon_snow.svg" class="products-elements__feachers-sun" alt="sun">                                                                                                                                                                                                                                                                                                                                                                                                                  
+                            </div>                            
+                            <div class="products-elements__item-image">
+                                <img src="images/content/tire.jpg" alt="шина">
+                            </div>
+                            <h3 class="products-elements__item-title">Шина 205/80 R16 104Q Misha RF Power Grum</h3>
+                            <span class="products-elements__item-price">11 680 Р</span>
+                            <img src="images/icons/products_basket.svg" class="products-elements__item-basket" alt="корзина">
+                        </li>
+                        <li class="products-elements__item">
+                            <img src="images/content/sale-flag.png" class="products-elements__item-sale" alt="sale">
+                            <div class="products-elements__feachers">
+                                <img src="images/icons/like.svg" class="products-elements__feachers-like active" alt="лайк">
+                                <img src="images/icons/icon_sun.svg" class="products-elements__feachers-sun" alt="sun">                                                                                                                                                                                                                                                                                                                                                                                                                  
+                            </div>                            
+                            <div class="products-elements__item-image">
+                                <img src="images/content/tire.jpg" alt="шина">
+                            </div>
+                            <h3 class="products-elements__item-title">Шина 205/80 R16 104Q Misha RF Power Grum</h3>
+                            <span class="products-elements__item-price hidden"></span>
+                            <div class="products-elements__item-none">
+                                <h3>нет в наличии</h3>
+                                <a href="">Сообщить о поступлении</a>
+                            </div>
+                            <img src="images/icons/products_basket.svg" class="products-elements__item-basket hidden" alt="корзина">
+                        </li>
+                        <li class="products-elements__item">
+                            <img src="images/content/sale-flag.png" class="products-elements__item-sale hidden" alt="sale">
+                            <div class="products-elements__feachers">
+                                <img src="images/icons/like.svg" class="products-elements__feachers-like" alt="лайк">
+                                <img src="images/icons/icon_sun.svg" class="products-elements__feachers-sun" alt="sun">                                                                                                                                                                                                                                                                                                                                                                                                                  
+                            </div>                            
+                            <div class="products-elements__item-image">
+                                <img src="images/content/tire.jpg" alt="шина">
+                            </div>
+                            <h3 class="products-elements__item-title">Шина 245/60 R18 105T Contyther Crosh Conta...</h3>
+                            <span class="products-elements__item-price">11 680 Р</span>
+                            <img src="images/icons/products_basket.svg" class="products-elements__item-basket" alt="корзина">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- <div class="popular-products__arrow popular-products__arrow--right">
+                <img src="images/icons/arrow_right_products.svg" alt="стрелка вправо">
+            </div> -->
         </section>
     </main>
 

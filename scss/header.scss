@@ -15,11 +15,11 @@
             display: flex;
             align-items: center;
             justify-content: flex-start;
-            font-weight: bold;
             color: $font-color; 
         }
 
         &__item {
+            font-weight: bold;
             margin-right: 40px;
         }
 

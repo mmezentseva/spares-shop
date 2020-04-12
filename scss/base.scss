@@ -6,6 +6,13 @@ $font-color: #48494D;
 $light-color: #ffffff;
 $gray-color: #F0F0F4;
 
+@font-face {
+    font-family: 'proxima-nova';
+    src: url('../fonts/ProximaNova-Regular.woff') format('woff');
+    font-weight: 300;
+    font-style: regular;
+  }
+
 body {
     font-family: 'Barlow', sans-serif;
     font-weight: normal;
@@ -16,8 +23,13 @@ body {
 p, h1, h2, h3, ul, li {
     text-decoration: none;
     list-style: none;
+    font-weight: normal;
     padding: 0;
     margin: 0;
+}
+
+button {
+    cursor: pointer;
 }
 
 a {

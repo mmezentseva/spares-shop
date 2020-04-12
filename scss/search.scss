@@ -46,16 +46,16 @@
             padding: 10px 15px 10px 15px;
             border: none;
             flex-basis: 90%;
-            border-radius: 3px;
-
+            border-radius: 3px;                                                                                                                                                                                                                                                                                                                                                                                                   
         }
 
         &__btn {
+            font-family: 'proxima-nova';
             background-color: $accent-color;
             font-weight: 600;
             font-size: 11px;
             line-height: 13px;
-            letter-spacing: 0.12em;
+            letter-spacing: 1.8px;
             text-transform: uppercase;
             color: $light-color;
             text-align: center;
