@@ -16,8 +16,14 @@ $gray-color: #F0F0F4;
 body {
     font-family: 'Barlow', sans-serif;
     font-weight: normal;
+    color: $font-color;
     font-size: 20px;
     line-height: 24px;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 p, h1, h2, h3, ul, li {
@@ -46,7 +52,6 @@ a {
     height: 100%;
     max-width: 1170px;
     margin: 0 auto;
-    padding: 0 15px;
 
     &-row {
         display: flex;

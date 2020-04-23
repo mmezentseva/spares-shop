@@ -170,6 +170,11 @@
                 margin: 0 auto;
                 color: #5F6063;;
             }
+
+            &--catalog {
+                width: calc(100% / 3 - 20px);
+                margin-bottom: 30px;
+            }
         }
 
         &__feachers {
