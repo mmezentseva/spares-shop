@@ -317,22 +317,32 @@ a {
       -ms-flex-preferred-size: 90%;
       flex-basis: 90%;
       border-radius: 3px; }
-    .search-form__btn {
-      font-family: 'proxima-nova';
-      background-color: #FF7931;
-      font-weight: 600;
-      font-size: 11px;
-      line-height: 13px;
-      letter-spacing: 1.8px;
-      text-transform: uppercase;
-      color: #ffffff;
-      text-align: center;
-      padding-top: 10px;
-      padding-bottom: 10px;
-      border: none;
-      -ms-flex-preferred-size: 10%;
-      flex-basis: 10%;
-      border-radius: 3px; }
+
+.button {
+  font-family: 'proxima-nova';
+  background-color: #FF7931;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 13px;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: none;
+  -ms-flex-preferred-size: 10%;
+  flex-basis: 10%;
+  border-radius: 3px; }
+  .button--footer {
+    letter-spacing: 0.12em;
+    padding: 12px 14px 10px 14px; }
+  .button--tires {
+    -ms-flex-preferred-size: 8%;
+    flex-basis: 8%;
+    margin-top: 10px;
+    padding: 0 20px;
+    font-size: 14px; }
 
 .categories-list {
   display: -webkit-box;
@@ -666,16 +676,6 @@ a {
       color: #A5A5A5;
       padding: 10px 1px 10px 14px;
       border: none; }
-    .footer-mail__btn {
-      background-color: #FF7931;
-      font-weight: 600;
-      font-size: 11px;
-      line-height: 13px;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: #ffffff;
-      padding: 12px 14px 10px 14px;
-      border: none; }
     .footer-mail__name {
       font-size: 12px;
       color: #A5A5A5; }
@@ -907,3 +907,429 @@ a {
     .catalog-pagination__item:nth-child(6) {
       margin-right: -5px;
       margin-left: -15px; }
+
+.tires {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding: 20px 0 65px; }
+  .tires-picture {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    min-height: 600px; }
+    .tires-picture__sale {
+      position: absolute;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      align-items: flex-start;
+      top: 0;
+      left: 0;
+      color: #A8A8A8;
+      font-size: 20px; }
+      .tires-picture__sale-icon {
+        font-family: 'proxima-nova';
+        background-color: #FF7931;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 13px;
+        letter-spacing: 1.8px;
+        text-transform: uppercase;
+        color: #ffffff;
+        text-align: center;
+        border: none;
+        border-radius: 3px;
+        padding: 14px 22px;
+        -ms-flex-preferred-size: 8%;
+        flex-basis: 8%;
+        margin-bottom: 10px; }
+      .tires-picture__sale-present {
+        margin-bottom: 20px; }
+      .tires-picture__sale > small {
+        font-family: Proxima Nova;
+        font-size: 12px;
+        line-height: 15px; }
+    .tires-picture__snow {
+      position: absolute;
+      top: 0;
+      right: 100px; }
+    .tires-picture__image > img {
+      height: 380px; }
+    .tires-picture__first-price {
+      margin-top: 20px; }
+    .tires-picture__price {
+      font-weight: bold;
+      font-size: 40px;
+      margin-bottom: 30px;
+      margin-top: 20px; }
+    .tires-picture__text {
+      font-family: 'proxima-nova';
+      color: #FF7931;
+      text-decoration: underline;
+      -webkit-text-decoration-style: solid;
+      text-decoration-style: solid;
+      -webkit-text-decoration-color: rgba(255, 121, 49, 0.4);
+      text-decoration-color: rgba(255, 121, 49, 0.4);
+      font-size: 15px;
+      line-height: 18px;
+      margin-bottom: 22px; }
+  .tires-description {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%; }
+    .tires-description__title {
+      font-weight: bold;
+      font-size: 30px;
+      line-height: 36px;
+      margin-bottom: 10px; }
+    .tires-description__code {
+      font-size: 15px;
+      line-height: 18px;
+      color: #000000;
+      opacity: 0.6;
+      margin-bottom: 25px; }
+    .tires-description__symbols {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      margin-bottom: 50px; }
+      .tires-description__symbols > img {
+        margin-right: 30px;
+        cursor: pointer; }
+    .tires-description__information {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      margin-bottom: 20px; }
+    .tires-description__row {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      padding: 10px 0; }
+      .tires-description__row:first-child {
+        border-bottom: none; }
+      .tires-description__row-left {
+        display: block;
+        width: 300px; }
+      .tires-description__row-right {
+        display: block;
+        width: 130px; }
+      .tires-description__row-title {
+        display: block;
+        width: 210px;
+        border-bottom: 2px solid transparent; }
+        .tires-description__row-title:first-child {
+          width: 150px;
+          margin-right: 30px; }
+        .tires-description__row-title.active {
+          border-bottom: 2px solid #FF7931;
+          padding-bottom: 3px;
+          text-shadow: 0 0 0.7px #48494D, 0 0 0.7px #48494D; }
+        .tires-description__row-title:hover {
+          border-bottom: 2px solid #FF7931;
+          text-shadow: 0 0 0.7px #48494D, 0 0 0.7px #48494D; }
+    .tires-description__more {
+      font-family: 'proxima-nova';
+      color: #FF7931;
+      text-decoration: underline;
+      -webkit-text-decoration-style: solid;
+      text-decoration-style: solid;
+      -webkit-text-decoration-color: rgba(255, 121, 49, 0.4);
+      text-decoration-color: rgba(255, 121, 49, 0.4);
+      font-size: 15px;
+      line-height: 18px;
+      margin-bottom: 22px; }
+
+.information {
+  background-color: #F4F4F6;
+  padding: 15px 15px;
+  width: 86%;
+  margin: 0 auto; }
+  .information-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+    .information-list__item.active {
+      border-bottom: 2px solid #FF7931;
+      padding-bottom: 3px;
+      text-shadow: 0 0 0.7px #48494D, 0 0 0.7px #48494D; }
+    .information-list__item:hover {
+      border-bottom: 2px solid #FF7931;
+      text-shadow: 0 0 0.7px #48494D, 0 0 0.7px #48494D; }
+    .information-list__item > a {
+      font-family: Proxima Nova;
+      font-size: 20px;
+      color: #000000;
+      opacity: 0.6; }
+
+.search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+  .search-item {
+    font-size: 17px;
+    color: #000;
+    opacity: 0.7; }
+    .search-item:first-child {
+      -ms-flex-preferred-size: 45%;
+      flex-basis: 45%; }
+    .search-item:nth-child(3) {
+      margin-right: 70px; }
+    .search-item__shop {
+      border-radius: 50px;
+      background-color: #F4F4F6;
+      border: none;
+      padding: 7px 10px;
+      margin-left: 10px;
+      outline: none;
+      width: 55%; }
+
+.search-item__radio:checked,
+.search-item__radio:not(:checked) {
+  position: absolute;
+  left: -9999px; }
+
+.search-item__radio:checked + label,
+.search-item__radio:not(:checked) + label {
+  position: relative;
+  padding-left: 27px;
+  cursor: pointer; }
+
+.search-item__radio:checked + label::before {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  left: 0;
+  top: calc(50% - 7px);
+  background-color: transparent;
+  border-radius: 2px;
+  border: 2px solid #FF7931; }
+
+.search-item__radio:checked + label::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  -webkit-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease;
+  opacity: 1;
+  left: 4px;
+  top: calc(50% - 3px);
+  background-color: #FF7931; }
+
+.search-item__radio:not(:checked) + label::before {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  left: 0;
+  top: calc(50% - 7px);
+  background-color: transparent;
+  border-radius: 2px;
+  border: 2px solid #DADADA; }
+
+.search-item__radio:not(:checked) + label::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  -webkit-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease;
+  opacity: 0;
+  left: 4px;
+  top: calc(50% - 3px);
+  background-color: #DADADA; }
+
+.adress {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .adress-row {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 30px 0;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.7); }
+    .adress-row:first-child {
+      border-bottom: none;
+      margin-bottom: -25px; }
+    .adress-row__adress {
+      -ms-flex-preferred-size: 18%;
+      flex-basis: 18%;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+    .adress-row__work {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      align-items: flex-start;
+      -ms-flex-preferred-size: 14%;
+      flex-basis: 14%; }
+    .adress-row__days {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      align-items: flex-start;
+      margin-right: 15px; }
+    .adress-row__times {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      align-items: flex-start; }
+    .adress-row__available {
+      -ms-flex-preferred-size: 15%;
+      flex-basis: 15%; }
+    .adress-row__amount {
+      -ms-flex-preferred-size: 11%;
+      flex-basis: 11%; }
+    .adress-row__title {
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      align-items: flex-start;
+      -ms-flex-preferred-size: 27%;
+      flex-basis: 27%;
+      color: #000000;
+      font-size: 20px; }
+      .adress-row__title:nth-child(2) {
+        -ms-flex-preferred-size: 23%;
+        flex-basis: 23%; }
+      .adress-row__title:nth-child(3) {
+        -ms-flex-preferred-size: 24%;
+        flex-basis: 24%; }
+      .adress-row__title:nth-child(4) {
+        -ms-flex-preferred-size: 31%;
+        flex-basis: 31%; }
