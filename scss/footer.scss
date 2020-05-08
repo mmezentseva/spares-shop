@@ -28,9 +28,12 @@
         }
 
         &__input {
-            color: #A5A5A5;
             padding: 10px 1px 10px 14px;
             border: none;
+
+            &::placeholder {
+                color: #A5A5A5;
+            }
         }
 
         &__name {

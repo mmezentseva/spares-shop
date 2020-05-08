@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Интернет-магазин Автозапчестей. Каталог товаров">
     <title>Spares-shop</title>
+
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="node_modules/normalize.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
     <header class="header">
         <div class="header-top">
@@ -31,7 +35,10 @@
                             <a href=""><img src="images/icons/user.svg" alt="аккаунт"></a>
                         </li>
                         <li class="header-user__item">
-                            <a href=""><img src="images/icons/basket.svg" alt="корзина"></a>
+                            <a href="">
+                                <img src="images/icons/basket.svg" alt="корзина">
+                                <span class="header-user__item-number">1</span>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -50,34 +57,34 @@
                     <li class="header-list__item"><a href="">Аксессуары</a></li>
                 </ul>
             </div>
-        </nav>   
+        </nav>
     </header>
 
     <main class="page-catalog">
         <section class="catalog-breadcrumbs">
             <div class="container container-row">
                 <ul class="catalog-breadcrumbs__list">
-                    <li class="catalog-breadcrumbs__items"><a href="">Главная</a></li>
-                    <li class="catalog-breadcrumbs__items"><a href="">Шины</a></li>
+                    <li class="catalog-breadcrumbs__items"><a href="index.html">Главная</a></li>
+                    <li class="catalog-breadcrumbs__items"><a href="catalog.html">Шины</a></li>
                     <li class="catalog-breadcrumbs__items"><a href="">Шины зимние</a></li>
                 </ul>
             </div>
         </section>
 
-        <section class="block-filter">
+        <section class="sort-block">
             <div class="container">
-                <h2 class="catalog__title">Нешипованные шины</h2>
-                <div class="catalog-filter">
-                    <ul class="catalog-filter__list">
-                        <li class="catalog-filter__item"><a href="">Полноприводные</a></li> 
-                        <li class="catalog-filter__item"><a href="">от 5000</a></li> 
-                        <li class="catalog-filter__item"><a href="">Nokian</a></li> 
-                        <li class="catalog-filter__item"><a href="">от 10000</a></li> 
-                        <li class="catalog-filter__item"><a href="">еще</a></li> 
+                <h2 class="sort-block__title">Нешипованные шины</h2>
+                <div class="catalog-sort">
+                    <ul class="catalog-sort__list">
+                        <li class="catalog-sort__item"><a href="">Полноприводные</a></li>
+                        <li class="catalog-sort__item"><a href="">от 5000</a></li>
+                        <li class="catalog-sort__item"><a href="">Nokian</a></li>
+                        <li class="catalog-sort__item"><a href="">от 10000</a></li>
+                        <li class="catalog-sort__item"><a href="">еще</a></li>
                     </ul>
-                    <div class="catalog-filter__right">
-                        <div class="catalog-filter__checkbox">По популярности</div>
-                        <div class="catalog-filter__view">
+                    <div class="catalog-sort__right">
+                        <div class="catalog-sort__checkbox">По популярности</div>
+                        <div class="catalog-sort__view">
                             <img src="images/icons/view-plite.svg" alt="отображение плиткой">
                             <img src="images/icons/view-list.svg" alt="отображение списком">
                         </div>
@@ -86,19 +93,331 @@
             </div>
         </section>
 
-        <section class="catalog-content">
+        <section class="catalog">
             <div class="container container-row">
-                <div class="catalog-content__left">
 
+                <div class="catalog-filter filter">
+                    <form class="filter__form" method="GET">
+                        <div class="filter__title">
+                            <h3 class="filter__title-type active">параметры</h3>
+                            <h3 class="filter__title-type">по марке</h3>
+                        </div>
+                        <div class="filter-fieldset">
+                            <p class="filter-fieldset__legend filter-fieldset__legend--open">Сезонность</p>
+                            <div class="filter-fieldset__list">
+                                <div class="filter-fieldset__item">
+                                    <input class="radio visually-hidden" type="radio" id="winter" name="season">
+                                    <label for="winter">Зимние</label>
+                                    <img class="filter-fieldset__question" src="images/icons/question.svg" alt="вопрос">
+                                </div>
+                                <div class="filter-fieldset__item">
+                                    <input class="radio visually-hidden" type="radio" id="summer" name="season">
+                                    <label for="summer">Летние</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="filter-fieldset">
+                            <p class="filter-fieldset__legend">Тип шин</p>
+                            <div class="filter-fieldset__list filter-fieldset__list--type">
+                                <div class="filter-fieldset__item filter-fieldset__item--type">
+                                    <input class="radio visually-hidden" type="radio" id="all" name="type">
+                                    <label for="all">Все</label>
+                                </div>
+                                <div class="filter-fieldset__item filter-fieldset__item--type">
+                                    <input class="radio visually-hidden" type="radio" id="studded" name="type">
+                                    <label for="studded">Шипованные</label>
+                                    <!-- <img class="filter-fieldset__question" src="images/icons/question.svg" alt="вопрос"> -->
+                                </div>
+                                <div class="filter-fieldset__item filter-fieldset__item--type">
+                                    <input class="radio visually-hidden" type="radio" id="notstudded" name="type">
+                                    <label for="notstudded">Нешипованные</label>
+                                    <img class="filter-fieldset__question" src="images/icons/question.svg" alt="вопрос">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="filter-fieldset">
+                            <p class="filter-fieldset__legend filter-fieldset__legend--open">Цена</p>
+                            <div class="filter-fieldset__filter-block">
+                                <div class="filter-fieldset__range-controls">
+                                    <div class="filter-fieldset__scale">
+                                        <div class="filter-fieldset__bar"></div>
+                                    </div>
+                                    <div class="filter-fieldset__point filter-fieldset__point--min"></div>
+                                    <div class="filter-fieldset__point filter-fieldset__point--max"></div>
+                                </div>
+                                <div class="filter-fieldset__price-controls">
+                                    <div class="filter-fieldset__row filter-fieldset__row--min">
+                                        <label for="min-price">от</label>
+                                        <input type="text" name="min-price" value="2000" id="min-price">
+                                    </div>
+                                    <div class="filter-fieldset__row filter-fieldset__row--max">
+                                        <label for="max-price">до</label>
+                                        <input type="text" name="max-price" value="12000" id="max-price">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="filter-fieldset filter-fieldset__select">
+                            <p class="filter-fieldset__legend filter-fieldset__legend--question">Диаметр</p>
+                            <div class="filter-fieldset__roll" data-state="">
+                                <div class="filter-fieldset__roll-title" data-default="10">10</div>
+                                <div class="filter-fieldset__roll-content">
+                                    <input id="10" class="filter-fieldset__roll-input" type="radio" name="diameter">
+                                    <label for="10" class="filter-fieldset__roll-label">10</label>
+                                    <input id="12" class="filter-fieldset__roll-input" type="radio" name="diameter">
+                                    <label for="12" class="filter-fieldset__roll-label">12</label>
+                                    <input id="12C" class="filter-fieldset__roll-input" type="radio" name="diameter">
+                                    <label for="12C" class="filter-fieldset__roll-label">12C</label>
+                                    <input id="13" class="filter-fieldset__roll-input" type="radio" name="diameter">
+                                    <label for="13" class="filter-fieldset__roll-label">13</label>
+                                    <input id="13C" class="filter-fieldset__roll-input" type="radio" name="diameter">
+                                    <label for="13C" class="filter-fieldset__roll-label">13C</label>
+                                    <input id="14" class="filter-fieldset__roll-input" type="radio" name="diameter">
+                                    <label for="14" class="filter-fieldset__roll-label">14</label>
+                                    <input id="14C" class="filter-fieldset__roll-input" type="radio" name="diameter">
+                                    <label for="14C" class="filter-fieldset__roll-label">14C</label>
+                                    <input id="15" class="filter-fieldset__roll-input" type="radio" name="diameter">
+                                    <label for="15" class="filter-fieldset__roll-label">15</label>
+                                    <input id="15C" class="filter-fieldset__roll-input" type="radio" name="diameter">
+                                    <label for="15C" class="filter-fieldset__roll-label">15C</label>
+                                    <input id="16" class="filter-fieldset__roll-input" type="radio" name="diameter">
+                                    <label for="16" class="filter-fieldset__roll-label">16</label>
+                                    <input id="16C" class="filter-fieldset__roll-input" type="radio" name="diameter">
+                                    <label for="16C" class="filter-fieldset__roll-label">16C</label>
+                                    <input id="17" class="filter-fieldset__roll-input" type="radio" name="diameter">
+                                    <label for="17" class="filter-fieldset__roll-label">17</label>
+                                    <input id="17C" class="filter-fieldset__roll-input" type="radio" name="diameter">
+                                    <label for="17C" class="filter-fieldset__roll-label">17C</label>
+                                    <input id="18" class="filter-fieldset__roll-input" type="radio" name="diameter">
+                                    <label for="18" class="filter-fieldset__roll-label">18</label>
+                                    <input id="18C" class="filter-fieldset__roll-input" type="radio" name="diameter">
+                                    <label for="18C" class="filter-fieldset__roll-label">18C</label>
+                                    <input id="19" class="filter-fieldset__roll-input" type="radio" name="diameter">
+                                    <label for="19" class="filter-fieldset__roll-label">19</label>
+                                    <input id="20" class="filter-fieldset__roll-input" type="radio" name="diameter">
+                                    <label for="20" class="filter-fieldset__roll-label">20</label>
+                                    <input id="21" class="filter-fieldset__roll-input" type="radio" name="diameter">
+                                    <label for="21" class="filter-fieldset__roll-label">21</label>
+                                    <input id="22" class="filter-fieldset__roll-input" type="radio" name="diameter">
+                                    <label for="22" class="filter-fieldset__roll-label">22</label>
+                                    <input id="23" class="filter-fieldset__roll-input" type="radio" name="diameter">
+                                    <label for="23" class="filter-fieldset__roll-label">23</label>
+                                    <input id="24" class="filter-fieldset__roll-input" type="radio" name="diameter">
+                                    <label for="24" class="filter-fieldset__roll-label">24</label>
+                                    <input id="25" class="filter-fieldset__roll-input" type="radio" name="diameter">
+                                    <label for="25" class="filter-fieldset__roll-label">25</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter-fieldset filter-fieldset__select">
+                            <p class="filter-fieldset__legend filter-fieldset__legend--question">Профиль</p>
+                            <div class="filter-fieldset__roll" data-state="">
+                                <div class="filter-fieldset__roll-title" data-default="30">30</div>
+                                <div class="filter-fieldset__roll-content">
+                                    <input id="30" class="filter-fieldset__roll-input" type="radio" name="profile">
+                                    <label for="30" class="filter-fieldset__roll-label">30</label>
+                                    <input id="35" class="filter-fieldset__roll-input" type="radio" name="profile">
+                                    <label for="35" class="filter-fieldset__roll-label">35</label>
+                                    <input id="40" class="filter-fieldset__roll-input" type="radio" name="profile">
+                                    <label for="40" class="filter-fieldset__roll-label">40</label>
+                                    <input id="45" class="filter-fieldset__roll-input" type="radio" name="profile">
+                                    <label for="45" class="filter-fieldset__roll-label">45</label>
+                                    <input id="50" class="filter-fieldset__roll-input" type="radio" name="profile">
+                                    <label for="50" class="filter-fieldset__roll-label">50</label>
+                                    <input id="55" class="filter-fieldset__roll-input" type="radio" name="profile">
+                                    <label for="55" class="filter-fieldset__roll-label">55</label>
+                                    <input id="60" class="filter-fieldset__roll-input" type="radio" name="profile">
+                                    <label for="60" class="filter-fieldset__roll-label">60</label>
+                                    <input id="65" class="filter-fieldset__roll-input" type="radio" name="profile">
+                                    <label for="65" class="filter-fieldset__roll-label">65</label>
+                                    <input id="70" class="filter-fieldset__roll-input" type="radio" name="profile">
+                                    <label for="70" class="filter-fieldset__roll-label">70</label>
+                                    <input id="75" class="filter-fieldset__roll-input" type="radio" name="profile">
+                                    <label for="75" class="filter-fieldset__roll-label">75</label>
+                                    <input id="82" class="filter-fieldset__roll-input" type="radio" name="profile">
+                                    <label for="82" class="filter-fieldset__roll-label">82</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter-fieldset filter-fieldset__select">
+                            <p class="filter-fieldset__legend filter-fieldset__legend--question">Ширина</p>
+                            <div class="filter-fieldset__roll" data-state="">
+                                <div class="filter-fieldset__roll-title" data-default="155">155</div>
+                                <div class="filter-fieldset__roll-content">
+                                    <input id="155" class="filter-fieldset__roll-input" type="radio" name="width">
+                                    <label for="155" class="filter-fieldset__roll-label">155</label>
+                                    <input id="165" class="filter-fieldset__roll-input" type="radio" name="width">
+                                    <label for="165" class="filter-fieldset__roll-label">165</label>
+                                    <input id="175" class="filter-fieldset__roll-input" type="radio" name="width">
+                                    <label for="175" class="filter-fieldset__roll-label">175</label>
+                                    <input id="185" class="filter-fieldset__roll-input" type="radio" name="width">
+                                    <label for="185" class="filter-fieldset__roll-label">185</label>
+                                    <input id="195" class="filter-fieldset__roll-input" type="radio" name="width">
+                                    <label for="195" class="filter-fieldset__roll-label">195</label>
+                                    <input id="205" class="filter-fieldset__roll-input" type="radio" name="width">
+                                    <label for="205" class="filter-fieldset__roll-label">205</label>
+                                    <input id="215" class="filter-fieldset__roll-input" type="radio" name="width">
+                                    <label for="215" class="filter-fieldset__roll-label">215</label>
+                                    <input id="225" class="filter-fieldset__roll-input" type="radio" name="width">
+                                    <label for="225" class="filter-fieldset__roll-label">225</label>
+                                    <input id="235" class="filter-fieldset__roll-input" type="radio" name="width">
+                                    <label for="235" class="filter-fieldset__roll-label">235</label>
+                                    <input id="245" class="filter-fieldset__roll-input" type="radio" name="width">
+                                    <label for="245" class="filter-fieldset__roll-label">245</label>
+                                    <input id="255" class="filter-fieldset__roll-input" type="radio" name="width">
+                                    <label for="255" class="filter-fieldset__roll-label">255</label>
+                                    <input id="265" class="filter-fieldset__roll-input" type="radio" name="width">
+                                    <label for="265" class="filter-fieldset__roll-label">265</label>
+                                    <input id="275" class="filter-fieldset__roll-input" type="radio" name="width">
+                                    <label for="275" class="filter-fieldset__roll-label">275</label>
+                                    <input id="285" class="filter-fieldset__roll-input" type="radio" name="width">
+                                    <label for="285" class="filter-fieldset__roll-label">285</label>
+                                    <input id="295" class="filter-fieldset__roll-input" type="radio" name="width">
+                                    <label for="295" class="filter-fieldset__roll-label">295</label>
+                                    <input id="305" class="filter-fieldset__roll-input" type="radio" name="width">
+                                    <label for="305" class="filter-fieldset__roll-label">305</label>
+                                    <input id="315" class="filter-fieldset__roll-input" type="radio" name="width">
+                                    <label for="315" class="filter-fieldset__roll-label">315</label>
+                                    <input id="325" class="filter-fieldset__roll-input" type="radio" name="width">
+                                    <label for="325" class="filter-fieldset__roll-label">325</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter-fieldset">
+                            <p class="filter-fieldset__legend filter-fieldset__legend--open">Бренд</p>
+                            <input class="filter-fieldset__input" type="text" name="" placeholder="Введите бренд шины">
+                            <div class="filter-fieldset__list">
+                                <div class="filter-fieldset__item">
+                                    <input class="checkbox visually-hidden" type="checkbox" id="gudrich" name="brand"
+                                        checked>
+                                    <label for="gudrich">B Gudrich</label>
+                                </div>
+                                <div class="filter-fieldset__item">
+                                    <input class="checkbox visually-hidden" type="checkbox" id="wridrestone"
+                                        name="brand" checked>
+                                    <label for="wridrestone">Wridrestone</label>
+                                </div>
+                                <div class="filter-fieldset__item">
+                                    <input class="checkbox visually-hidden" type="checkbox" id="rarym" name="brand">
+                                    <label for="rarym">Rarym</label>
+                                </div>
+                                <div class="filter-fieldset__item">
+                                    <input class="checkbox visually-hidden" type="checkbox" id="bfhide" name="brand">
+                                    <label for="bfhide">BF hide</label>
+                                </div>
+                            </div>
+                            <a href="" class="filter-fieldset__more">Показать еще</a>
+                        </div>
+
+                        <div class="filter-fieldset">
+                            <p class="filter-fieldset__legend filter-fieldset__legend--open">Модель</p>
+                            <input class="filter-fieldset__input" type="text" name="" placeholder="Введите модель шины">
+                            <div class="filter-fieldset__list">
+                                <div class="filter-fieldset__item">
+                                    <input class="checkbox visually-hidden" type="checkbox" id="alina" name="model"
+                                        checked>
+                                    <label for="alina">ALINA</label>
+                                </div>
+                                <div class="filter-fieldset__item">
+                                    <input class="checkbox visually-hidden" type="checkbox" id="bliwwas" name="model"
+                                        checked>
+                                    <label for="bliwwas">BLIWWAS</label>
+                                </div>
+                                <div class="filter-fieldset__item">
+                                    <input class="checkbox visually-hidden" type="checkbox" id="force" name="model">
+                                    <label for="force">FORCE Moode</label>
+                                </div>
+                                <div class="filter-fieldset__item">
+                                    <input class="checkbox visually-hidden" type="checkbox" id="icegide" name="model">
+                                    <label for="icegide">ICE Gide</label>
+                                </div>
+                            </div>
+                            <a href="" class="filter-fieldset__more">Показать еще</a>
+                        </div>
+
+                        <div class="filter-fieldset">
+                            <p class="filter-fieldset__legend filter-fieldset__legend--question">Технология</p>
+                            <div class="filter-fieldset__list">
+                                <div class="filter-fieldset__item">
+                                    <input class="radio visually-hidden" type="radio" id="yes" name="technology">
+                                    <label for="yes">Да</label>
+                                </div>
+                                <div class="filter-fieldset__item">
+                                    <input class="radio visually-hidden" type="radio" id="no" name="technology">
+                                    <label for="no">Нет</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="filter-fieldset filter-fieldset__stock">
+                            <p class="filter-fieldset__legend">Акции</p>
+                            <div class="filter-fieldset__list">
+                                <div class="filter-fieldset__item filter-fieldset__item--stock">
+                                    <input class="visually-hidden" type="checkbox" id="sale" name="stock" checked>
+                                    <label for="sale">sale</label>
+                                </div>
+                                <div class="filter-fieldset__item filter-fieldset__item--stock">
+                                    <input class="visually-hidden" type="checkbox" id="new" name="stock" checked>
+                                    <label for="new">new</label>
+                                </div>
+                                <div class="filter-fieldset__item filter-fieldset__item--stock">
+                                    <input class="visually-hidden" type="checkbox" id="hit" name="stock">
+                                    <label for="hit">hit</label>
+                                </div>
+                                <div class="filter-fieldset__item filter-fieldset__item--stock">
+                                    <input class="visually-hidden" type="checkbox" id="подарок" name="stock">
+                                    <label for="подарок">подарок</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="filter-fieldset">
+                            <p class="filter-fieldset__legend filter-fieldset__legend--open">Страны</p>
+                            <div class="filter-fieldset__list">
+                                <div class="filter-fieldset__item">
+                                    <input class="checkbox visually-hidden" type="checkbox" id="russia" name="country"
+                                        checked>
+                                    <label for="russia">Россия</label>
+                                </div>
+                                <div class="filter-fieldset__item">
+                                    <input class="checkbox visually-hidden" type="checkbox" id="germany" name="country"
+                                        checked>
+                                    <label for="germany">Германия</label>
+                                </div>
+                                <div class="filter-fieldset__item">
+                                    <input class="checkbox visually-hidden" type="checkbox" id="japan" name="country">
+                                    <label for="japan">Япония</label>
+                                </div>
+                                <div class="filter-fieldset__item">
+                                    <input class="checkbox visually-hidden" type="checkbox" id="usa" name="country">
+                                    <label for="usa">США</label>
+                                </div>
+                            </div>
+                            <a href="" class="filter-fieldset__more">Показать еще</a>
+                        </div>
+
+                        <div class="filter-fieldset filter-fieldset__submit">
+                            <button class="button button--filter" type="submit">Подобрать</button>
+                            <button class="filter-fieldset__extra" type="submit">Дополнительные параметры</button>
+                            <button class="filter-fieldset__reset" type="reset">Сбросить фильтр</button>
+                        </div>
+
+                    </form>
                 </div>
-                <div class="catalog-content__right">
+
+                <div class="catalog-content">
                     <ul class="catalog-products">
                         <li class="products-elements__item products-elements__item--catalog">
                             <img src="images/content/sale-flag.png" class="products-elements__item-sale" alt="sale">
                             <div class="products-elements__feachers">
-                                <img src="images/icons/like.svg" class="products-elements__feachers-like active" alt="лайк">
-                                <img src="images/icons/icon_sun.svg" class="products-elements__feachers-sun" alt="солнце">                                                                                                                                                                                                                                                                                                                                                                                                                  
-                            </div>                            
+                                <img src="images/icons/like.svg" class="products-elements__feachers-like active"
+                                    alt="лайк">
+                                <img src="images/icons/icon_sun.svg" class="products-elements__feachers-sun"
+                                    alt="солнце">
+                            </div>
                             <div class="products-elements__item-image">
                                 <img src="images/content/tire.jpg" alt="шина">
                             </div>
@@ -108,29 +427,35 @@
                                 <h3>нет в наличии</h3>
                                 <a href="">Сообщить о поступлении</a>
                             </div>
-                            <img src="images/icons/products_basket.svg" class="products-elements__item-basket hidden" alt="корзина">
+                            <img src="images/icons/products_basket.svg" class="products-elements__item-basket hidden"
+                                alt="корзина">
                         </li>
 
                         <li class="products-elements__item products-elements__item--catalog">
-                            <img src="images/content/sale-flag.png" class="products-elements__item-sale hidden" alt="sale">
+                            <img src="images/content/sale-flag.png" class="products-elements__item-sale hidden"
+                                alt="sale">
                             <div class="products-elements__feachers">
                                 <img src="images/icons/like.svg" class="products-elements__feachers-like" alt="лайк">
-                                <img src="images/icons/icon_sun.svg" class="products-elements__feachers-sun" alt="снежинка">                                                                                                                                                                                                                                                                                                                                                                                                                  
-                            </div>                            
+                                <img src="images/icons/icon_sun.svg" class="products-elements__feachers-sun"
+                                    alt="снежинка">
+                            </div>
                             <div class="products-elements__item-image">
                                 <img src="images/content/tire.jpg" alt="шина">
                             </div>
                             <h3 class="products-elements__item-title">Шина 205/80 R16 104Q Misha RF Power Grum</h3>
-                            <span class="products-elements__item-price">11 680 Р</span>
-                            <img src="images/icons/products_basket.svg" class="products-elements__item-basket" alt="корзина">
+                            <span class="products-elements__item-price">11 680 ₽</span>
+                            <img src="images/icons/products_basket.svg" class="products-elements__item-basket"
+                                alt="корзина">
                         </li>
 
                         <li class="products-elements__item products-elements__item--catalog">
                             <img src="images/content/sale-flag.png" class="products-elements__item-sale" alt="sale">
                             <div class="products-elements__feachers">
-                                <img src="images/icons/like.svg" class="products-elements__feachers-like active" alt="лайк">
-                                <img src="images/icons/icon_sun.svg" class="products-elements__feachers-sun" alt="солнце">                                                                                                                                                                                                                                                                                                                                                                                                                  
-                            </div>                            
+                                <img src="images/icons/like.svg" class="products-elements__feachers-like active"
+                                    alt="лайк">
+                                <img src="images/icons/icon_sun.svg" class="products-elements__feachers-sun"
+                                    alt="солнце">
+                            </div>
                             <div class="products-elements__item-image">
                                 <img src="images/content/tire.jpg" alt="шина">
                             </div>
@@ -140,15 +465,18 @@
                                 <h3>нет в наличии</h3>
                                 <a href="">Сообщить о поступлении</a>
                             </div>
-                            <img src="images/icons/products_basket.svg" class="products-elements__item-basket hidden" alt="корзина">
+                            <img src="images/icons/products_basket.svg" class="products-elements__item-basket hidden"
+                                alt="корзина">
                         </li>
 
                         <li class="products-elements__item products-elements__item--catalog">
                             <img src="images/content/sale-flag.png" class="products-elements__item-sale" alt="sale">
                             <div class="products-elements__feachers">
-                                <img src="images/icons/like.svg" class="products-elements__feachers-like active" alt="лайк">
-                                <img src="images/icons/icon_sun.svg" class="products-elements__feachers-sun" alt="солнце">                                                                                                                                                                                                                                                                                                                                                                                                                  
-                            </div>                            
+                                <img src="images/icons/like.svg" class="products-elements__feachers-like active"
+                                    alt="лайк">
+                                <img src="images/icons/icon_sun.svg" class="products-elements__feachers-sun"
+                                    alt="солнце">
+                            </div>
                             <div class="products-elements__item-image">
                                 <img src="images/content/tire.jpg" alt="шина">
                             </div>
@@ -158,29 +486,35 @@
                                 <h3>нет в наличии</h3>
                                 <a href="">Сообщить о поступлении</a>
                             </div>
-                            <img src="images/icons/products_basket.svg" class="products-elements__item-basket hidden" alt="корзина">
+                            <img src="images/icons/products_basket.svg" class="products-elements__item-basket hidden"
+                                alt="корзина">
                         </li>
 
                         <li class="products-elements__item products-elements__item--catalog">
-                            <img src="images/content/sale-flag.png" class="products-elements__item-sale hidden" alt="sale">
+                            <img src="images/content/sale-flag.png" class="products-elements__item-sale hidden"
+                                alt="sale">
                             <div class="products-elements__feachers">
                                 <img src="images/icons/like.svg" class="products-elements__feachers-like" alt="лайк">
-                                <img src="images/icons/icon_sun.svg" class="products-elements__feachers-sun" alt="снежинка">                                                                                                                                                                                                                                                                                                                                                                                                                  
-                            </div>                            
+                                <img src="images/icons/icon_sun.svg" class="products-elements__feachers-sun"
+                                    alt="снежинка">
+                            </div>
                             <div class="products-elements__item-image">
                                 <img src="images/content/tire.jpg" alt="шина">
                             </div>
                             <h3 class="products-elements__item-title">Шина 205/80 R16 104Q Misha RF Power Grum</h3>
-                            <span class="products-elements__item-price">11 680 Р</span>
-                            <img src="images/icons/products_basket.svg" class="products-elements__item-basket" alt="корзина">
+                            <span class="products-elements__item-price">11 680 ₽</span>
+                            <img src="images/icons/products_basket.svg" class="products-elements__item-basket"
+                                alt="корзина">
                         </li>
 
                         <li class="products-elements__item products-elements__item--catalog">
                             <img src="images/content/sale-flag.png" class="products-elements__item-sale" alt="sale">
                             <div class="products-elements__feachers">
-                                <img src="images/icons/like.svg" class="products-elements__feachers-like active" alt="лайк">
-                                <img src="images/icons/icon_sun.svg" class="products-elements__feachers-sun" alt="солнце">                                                                                                                                                                                                                                                                                                                                                                                                                  
-                            </div>                            
+                                <img src="images/icons/like.svg" class="products-elements__feachers-like active"
+                                    alt="лайк">
+                                <img src="images/icons/icon_sun.svg" class="products-elements__feachers-sun"
+                                    alt="солнце">
+                            </div>
                             <div class="products-elements__item-image">
                                 <img src="images/content/tire.jpg" alt="шина">
                             </div>
@@ -190,15 +524,18 @@
                                 <h3>нет в наличии</h3>
                                 <a href="">Сообщить о поступлении</a>
                             </div>
-                            <img src="images/icons/products_basket.svg" class="products-elements__item-basket hidden" alt="корзина">
+                            <img src="images/icons/products_basket.svg" class="products-elements__item-basket hidden"
+                                alt="корзина">
                         </li>
 
                         <li class="products-elements__item products-elements__item--catalog">
                             <img src="images/content/sale-flag.png" class="products-elements__item-sale" alt="sale">
                             <div class="products-elements__feachers">
-                                <img src="images/icons/like.svg" class="products-elements__feachers-like active" alt="лайк">
-                                <img src="images/icons/icon_sun.svg" class="products-elements__feachers-sun" alt="солнце">                                                                                                                                                                                                                                                                                                                                                                                                                  
-                            </div>                            
+                                <img src="images/icons/like.svg" class="products-elements__feachers-like active"
+                                    alt="лайк">
+                                <img src="images/icons/icon_sun.svg" class="products-elements__feachers-sun"
+                                    alt="солнце">
+                            </div>
                             <div class="products-elements__item-image">
                                 <img src="images/content/tire.jpg" alt="шина">
                             </div>
@@ -208,29 +545,35 @@
                                 <h3>нет в наличии</h3>
                                 <a href="">Сообщить о поступлении</a>
                             </div>
-                            <img src="images/icons/products_basket.svg" class="products-elements__item-basket hidden" alt="корзина">
+                            <img src="images/icons/products_basket.svg" class="products-elements__item-basket hidden"
+                                alt="корзина">
                         </li>
 
                         <li class="products-elements__item products-elements__item--catalog">
-                            <img src="images/content/sale-flag.png" class="products-elements__item-sale hidden" alt="sale">
+                            <img src="images/content/sale-flag.png" class="products-elements__item-sale hidden"
+                                alt="sale">
                             <div class="products-elements__feachers">
                                 <img src="images/icons/like.svg" class="products-elements__feachers-like" alt="лайк">
-                                <img src="images/icons/icon_sun.svg" class="products-elements__feachers-sun" alt="снежинка">                                                                                                                                                                                                                                                                                                                                                                                                                  
-                            </div>                            
+                                <img src="images/icons/icon_sun.svg" class="products-elements__feachers-sun"
+                                    alt="снежинка">
+                            </div>
                             <div class="products-elements__item-image">
                                 <img src="images/content/tire.jpg" alt="шина">
                             </div>
                             <h3 class="products-elements__item-title">Шина 205/80 R16 104Q Misha RF Power Grum</h3>
-                            <span class="products-elements__item-price">11 680 Р</span>
-                            <img src="images/icons/products_basket.svg" class="products-elements__item-basket" alt="корзина">
+                            <span class="products-elements__item-price">11 680 ₽</span>
+                            <img src="images/icons/products_basket.svg" class="products-elements__item-basket"
+                                alt="корзина">
                         </li>
 
                         <li class="products-elements__item products-elements__item--catalog">
                             <img src="images/content/sale-flag.png" class="products-elements__item-sale" alt="sale">
                             <div class="products-elements__feachers">
-                                <img src="images/icons/like.svg" class="products-elements__feachers-like active" alt="лайк">
-                                <img src="images/icons/icon_sun.svg" class="products-elements__feachers-sun" alt="солнце">                                                                                                                                                                                                                                                                                                                                                                                                                  
-                            </div>                            
+                                <img src="images/icons/like.svg" class="products-elements__feachers-like active"
+                                    alt="лайк">
+                                <img src="images/icons/icon_sun.svg" class="products-elements__feachers-sun"
+                                    alt="солнце">
+                            </div>
                             <div class="products-elements__item-image">
                                 <img src="images/content/tire.jpg" alt="шина">
                             </div>
@@ -240,7 +583,8 @@
                                 <h3>нет в наличии</h3>
                                 <a href="">Сообщить о поступлении</a>
                             </div>
-                            <img src="images/icons/products_basket.svg" class="products-elements__item-basket hidden" alt="корзина">
+                            <img src="images/icons/products_basket.svg" class="products-elements__item-basket hidden"
+                                alt="корзина">
                         </li>
                     </ul>
                     <ul class="catalog-pagination">
@@ -252,15 +596,15 @@
                         <li class="catalog-pagination__item"><a href="">..</a></li>
                         <li class="catalog-pagination__item"><a href="">11</a></li>
                     </ul>
-                </div> 
-            </div>   
+                </div>
+            </div>
         </section>
     </main>
 
     <footer class="footer">
         <div class="container container-row">
             <div class="footer-mail">
-                <p class="footer-mail__title">Подпишитесь на нашу рассылку 
+                <p class="footer-mail__title">Подпишитесь на нашу рассылку
                     и узнавайте о акция быстрее</p>
                 <div class="footer-mail__form">
                     <input class="footer-mail__input" type="text" name="" placeholder="Введите ваш e-mail:">
@@ -298,6 +642,7 @@
             </div>
         </div>
     </footer>
-    
+    <script src="catalog.js"></script>
 </body>
-</html>                              
+
+</html>
