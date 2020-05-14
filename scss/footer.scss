@@ -15,30 +15,35 @@
         color: $font-color;
 
         &__title {
-            width: 65%;
+            width: 70%;
             line-height: 17px;
             font-weight: bold;
+            letter-spacing: 0.6px;
         }
 
         &__form {
             display: inline-block;
             font-size: 0;
-            margin-bottom: 25px;
-            margin-top: 28px;
+            margin-bottom: 30px;
+            margin-top: 34px;
         }
 
         &__input {
-            padding: 10px 1px 10px 14px;
+            padding: 7px 0 8px 7px;
+            margin-right: -3px;
+            color: #656464;
             border: none;
 
             &::placeholder {
                 color: #A5A5A5;
+                letter-spacing: 0.7px;
             }
         }
 
         &__name {
             font-size: 12px;
             color: #A5A5A5;
+            letter-spacing: 0.6px;
         }
     }
 
@@ -50,17 +55,37 @@
         &__block {
             flex-direction: column;
             flex-basis: 25%;
-            margin-left: 56px;
+            margin-right: 0px;
+            letter-spacing: 0.6px;
+
+            &:first-child {
+                margin-left: 102px;
+            }
+
+            &:nth-child(2) {
+                margin-right: 44px;
+            }
+
+            &:nth-child(3) {
+                margin-right: 30px;
+            }
+
             &:last-child {
                 align-self: flex-end;
-                margin-bottom: 35px;
+                margin-bottom: 47px;
+                margin-left: 10px;
             }   
         }
 
         &__item {
-            &--title {
-                font-weight: bold;
+
+            & > a:hover {
+                color: #A5A5A5;
             }
         }
     }
+}
+
+.footer-sitemap__item--title {
+    font-weight: bold;
 }

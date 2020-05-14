@@ -6,47 +6,55 @@
     width: 100%;
 
     &-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
 
         &__item {
+            padding: 0 16px;
+            margin-right: 15px;
             color: $font-color;
-            display: inline-block;
-            width: 23%;
+            /* display: inline-block;
+            width: 23%; */
+        }
 
-            &>a {
+        &__link {
+            display: block;
+            text-align: center;
+            border-radius: 5px;
+            padding: 10px 5px;
+            transition: .3s;
+            letter-spacing: 0.6px;
+
+            &:hover {
+                text-shadow: 0 0 .7px $font-color, 0 0 .7px $font-color;
+                transition: border-bottom .3s; 
+            } 
+
+            &.active {
                 display: block;
                 text-align: center;
-                border-radius: 5px;
-                padding: 10px 0px;
-                transition: .3s;
-
-                &:hover {
-                    background: $gray-color;
-                    font-weight: bold; 
-                    
-                }
-                &.active {
-                    display: block;
-                    text-align: center;
-                    padding: 10px 0px;
-                    background: $gray-color;
-                    font-weight: bold; 
-                }
+                padding: 10px 20px;
+                background: $gray-color;
+                font-weight: bold; 
             }
         }
     }
 
     &-form {
         display: flex;
-        margin-top: 30px;
+        margin-top: 27px;
 
         &__input {
             background-color: $gray-color;
-            color: $light-color;
+            color: #656464;
             font-size: 16px;
-            padding: 10px 15px 10px 15px;
+            padding: 10px 15px 10px 19px;
+            margin-right: -5px;
             border: none;
             flex-basis: 90%;
-            border-radius: 3px;                                                                                                                                                                                                                                                                                                                                                                                                   
+            border-radius: 3px; 
+            letter-spacing: 0.4px;                                                                                                                                                                                                                                                                                                                                                                                                  
         }
     }
 }
@@ -57,19 +65,26 @@
     font-weight: 600;
     font-size: 11px;
     line-height: 13px;
-    letter-spacing: 1.8px;
+    letter-spacing: 3.5px;
     text-transform: uppercase;
     color: $light-color;
     text-align: center;
-    padding-top: 10px;
-    padding-bottom: 10px;  
+    padding-top: 19px;
+    padding-bottom: 19px;  
     border: none;
-    flex-basis: 10%;
+    flex-basis: 13%;
     border-radius: 3px;
 
+    &--search {
+        font-size: 14px;
+        line-height: 17px;
+        padding: 17px 10px 17px 11px;
+        letter-spacing: 2px;
+    }
+
     &--footer {
-        letter-spacing: 0.12em;
-        padding: 12px 14px 10px 14px;
+        letter-spacing: 1.7px;
+        padding: 10px 14px 9px 17px;
     }
 
     &--tires {

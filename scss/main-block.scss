@@ -1,13 +1,13 @@
 .main-block {
     display: flex;
     justify-content: space-between;
-    padding: 50px 0;
+    padding: 77px 0 19px 0;
 
     &-baner {
         flex-basis: 75%;
         display: flex;
         // background: linear-gradient(to right, $gradient-dark, $gradient-light);
-        margin-right: 30px;
+        margin-right: 20px;
     }
 
     &-adv {
@@ -32,7 +32,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        top: 15px;
+        top: 19px;
         right: 12px;
         z-index: 1;
 
@@ -50,16 +50,19 @@
         text-align: center;
 
         &>h3 {
-            margin-top: 10px;
+            margin-top: 15px;
+            margin-left: 6px;
             font-weight: bold;
+            letter-spacing: 0.8px;
         }
     }
 
     &__img {
-        margin-top: 60px;
+        margin-top: 50px;
 
         &>img {
-            width: 50%;
+            width: 53%;
+            height: 187px;
         }
     }
 
@@ -68,12 +71,14 @@
         flex-direction: column;
         text-align: center;
         background-color: $gray-color;
-        margin-top: 32px;
-        padding: 15px 0px;
+        margin-top: 20px;
+        padding: 10px 0px;
 
         &>h3 {
             font-size: 18px;
             font-weight: 300;
+            letter-spacing: 0.7px;
+            margin-right: -4px;
         }
 
     }
@@ -83,26 +88,34 @@
         justify-content: center;
         margin-right: 20px;
 
+        & > img {
+            margin-right: -7px;
+        }
+
         &-counter {
             display: flex;
             flex-direction: column;
             justify-content: center;
             margin-left: 10px;
+            margin-top: 2px;
 
             &>span {
                 font-family: 'proxima-nova';
                 font-size: 20px;
                 font-weight: bold;
-                letter-spacing: 2.2px;
+                letter-spacing: 2.9px;
                 padding-top: 10px;
+                margin-right: -6px;
             }
     
             &>small {
                 font-family: 'proxima-nova';
                 font-size: 10px;
                 line-height: 10px;
-                letter-spacing: 0.8px;
+                letter-spacing: 1.2px;
                 padding-bottom: 7px;
+                margin-top: -2px;
+                margin-left: 8px;
             }
         }
     }

@@ -1,3 +1,8 @@
+.categories {
+    padding-top: 28px;
+    padding-bottom: 11px;
+}
+
 .categories-list {
     display: flex;
     justify-content: space-between;
@@ -9,7 +14,7 @@
         justify-content: space-between;
         align-items: center;
         border: 1px solid #CDCDCD;
-        flex-basis: 31%;
+        flex-basis: 31.5%;
         margin-bottom: 30px;
         min-height: 130px;
         border-radius: 3px;
@@ -32,12 +37,20 @@
                 color: $accent-color;
             }
         }
+
+        &:last-child {
+            .categories-list__text {
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+        }
     }
 
     &__text {
         display: flex;
         flex-direction: column;
         margin-left: 20px;
+        margin-top: 4px;
         flex-basis: 50%;
 
         & > h3 {
@@ -45,6 +58,7 @@
             font-size: 23px;
             font-weight: bold;
             margin-bottom: 40px;
+            letter-spacing: 0.7px;
         }
 
         & > a {
@@ -55,7 +69,7 @@
     }
 
     &__image {
-        width: 97px;
+        width: 100px;
         height: 97px;
         background: url("../images/icons/ellipse.png") no-repeat;
         overflow: hidden;
