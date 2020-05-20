@@ -14,8 +14,6 @@
             padding: 0 16px;
             margin-right: 15px;
             color: $font-color;
-            /* display: inline-block;
-            width: 23%; */
         }
 
         &__link {
@@ -25,6 +23,7 @@
             padding: 10px 5px;
             transition: .3s;
             letter-spacing: 0.6px;
+            white-space: nowrap;
 
             &:hover {
                 text-shadow: 0 0 .7px $font-color, 0 0 .7px $font-color;
@@ -37,11 +36,16 @@
                 padding: 10px 20px;
                 background: $gray-color;
                 font-weight: bold; 
+
+                &:hover {
+                    text-shadow: none;
+                }
             }
         }
     }
 
     &-form {
+        position: relative;
         display: flex;
         margin-top: 27px;
 
@@ -54,51 +58,11 @@
             border: none;
             flex-basis: 90%;
             border-radius: 3px; 
-            letter-spacing: 0.4px;                                                                                                                                                                                                                                                                                                                                                                                                  
+            letter-spacing: 0.4px;  
+            
+            @media(max-width: 800px) {
+                flex-basis: 100%;
+            }
         }
-    }
-}
-
-.button {
-    font-family: 'proxima-nova';
-    background-color: $accent-color;
-    font-weight: 600;
-    font-size: 11px;
-    line-height: 13px;
-    letter-spacing: 3.5px;
-    text-transform: uppercase;
-    color: $light-color;
-    text-align: center;
-    padding-top: 19px;
-    padding-bottom: 19px;  
-    border: none;
-    flex-basis: 13%;
-    border-radius: 3px;
-
-    &--search {
-        font-size: 14px;
-        line-height: 17px;
-        padding: 17px 10px 17px 11px;
-        letter-spacing: 2px;
-    }
-
-    &--footer {
-        letter-spacing: 1.7px;
-        padding: 10px 14px 9px 17px;
-    }
-
-    &--tires {
-        flex-basis: 8%;
-        margin-top: 10px;
-        padding: 0 20px;
-        font-size: 14px;
-    }
-
-    &--filter {
-        background-color: #F0F0F4;
-        color: #BDBEC2;
-        font-size: 13px;
-        width: 100%;
-        padding: 17px 40px 10px;
     }
 }
